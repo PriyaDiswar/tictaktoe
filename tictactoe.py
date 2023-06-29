@@ -1,9 +1,29 @@
+import os
 def print_screen():
     '''prints whole screen depending upon condition'''
     pass
 
 def print_game_screen():
-    pass
+    os.system("clear")
+    print('''
+         |     |    
+      1  |  2  |  3  
+    -----|-----|-----
+      4  |  5  |  6  
+    -----|-----|-----
+      7  |  8  |  9 
+         |     |     
+    
+              
+    ''')
+    print("     |     |     ")
+    print("     |     |     ")
+    print("-----|-----|-----")
+    print("     |     |     ")
+    print("-----|-----|-----")
+    print("     |     |     ")
+    print("     |     |     ")
+
 
 def check_game_result():
     pass
