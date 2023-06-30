@@ -1,3 +1,6 @@
+# TODO: Keep board empty at start
+BOARD = [[' ', ' ', 'X'], [' ', 'X', 'O'], ['X', 'O', ' ']]
+
 def print_screen():
     '''prints whole screen depending upon condition'''
     pass
