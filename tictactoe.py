@@ -45,7 +45,7 @@ def check_game_iswinner(sign):
 def take_input():
     a=int(input("Please enter your choice : "))
     if a>9:
-        return
+        return None
     return a
 
 def validate_input(inp):
