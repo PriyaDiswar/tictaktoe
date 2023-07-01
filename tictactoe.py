@@ -19,15 +19,17 @@ def print_game_screen():
     
               
     ''')
-    print("     |     |     ")
-    print("     |     |     ")
-    print("-----|-----|-----")
-    print("     |     |     ")
-    print("-----|-----|-----")
-    print("     |     |     ")
-    print("     |     |     ")
-
-
+    print("""
+         |     |     
+         |     |    
+    -----|-----|-----
+         |     |     
+    -----|-----|-----
+         |     |     
+         |     |     
+         
+    
+    """)
 def check_game_result():
     pass
 
