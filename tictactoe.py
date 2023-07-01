@@ -1,4 +1,5 @@
 import os
+import time
 # TODO: Keep board empty at start
 BOARD = [[' ', ' ', 'X'], [' ', 'X', 'O'], ['X', 'O', ' ']]
 
@@ -26,6 +27,7 @@ def print_game_screen():
     print("-----|-----|-----")
     print("     |     |     ")
     print("     |     |     ")
+    time.sleep(.1)
 
 
 def check_game_result():
