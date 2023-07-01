@@ -12,7 +12,11 @@ def check_game_isdraw():
     pass
 
 def check_game_iswinner(sign):
-    pass
+    global board
+    for i in range(3):
+        if board[i][0]==board[i][1]==board[i][2]:
+            return True
+        
 
 def take_input():
     pass
