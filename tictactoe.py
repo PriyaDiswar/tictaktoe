@@ -16,8 +16,6 @@ def print_game_screen():
     -----|-----|-----
       7  |  8  |  9 
          |     |     
-    
-              
     ''')
     print("""
          |     |     
@@ -27,8 +25,6 @@ def print_game_screen():
     -----|-----|-----
          |     |     
          |     |     
-         
-    
     """)
 def check_game_result():
     pass
