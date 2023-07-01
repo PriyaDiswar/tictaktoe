@@ -1,6 +1,5 @@
 import os
 import time
-symb=None
 # TODO: Keep board empty at start
 BOARD = [[' ', ' ', ' '], [' ', ' ', ' '], [' ', ' ', ' ']]
 
