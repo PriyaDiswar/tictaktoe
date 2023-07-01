@@ -1,4 +1,7 @@
 import os
+# TODO: Keep board empty at start
+BOARD = [[' ', ' ', 'X'], [' ', 'X', 'O'], ['X', 'O', ' ']]
+
 def print_screen():
     '''prints whole screen depending upon condition'''
     pass
@@ -35,7 +38,10 @@ def check_game_iswinner(sign):
     pass
 
 def take_input():
-    pass
+    a=int(input("Please enter your choice : "))
+    if a>9:
+        return
+    return a
 
 def validate_input(inp):
     pass
