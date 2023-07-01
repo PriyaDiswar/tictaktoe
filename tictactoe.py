@@ -1,4 +1,5 @@
 import os
+import time
 symb=None
 # TODO: Keep board empty at start
 BOARD = [[' ', ' ', 'X'], [' ', 'X', 'O'], ['X', 'O', ' ']]
@@ -17,6 +18,15 @@ def print_game_screen():
       7  |  8  |  9 
          |     |     
     ''')
+    print("     |     |     ")
+    print("     |     |     ")
+    print("-----|-----|-----")
+    print("     |     |     ")
+    print("-----|-----|-----")
+    print("     |     |     ")
+    print("     |     |     ")
+    time.sleep(.1)
+
     print("""
          |     |     
          |     |    
