@@ -3,9 +3,30 @@ import time
 symb=None
 # TODO: Keep board empty at start
 BOARD = [[' ', ' ', 'X'], [' ', 'X', 'O'], ['X', 'O', ' ']]
-def print_screen():
-    '''prints whole screen depending upon condition'''
-    pass
+
+def print_home_screen():
+    os.system("clear")
+    print('''
+    Welcome to the Game of 
+        Tic Tac Toe
+    
+    ''')
+    time.sleep(.1)
+    a=int(input("To start the game Press 1 : "))
+    if a==1:
+        print_game_screen()
+    else:
+        print("Wrong choice")
+        b=input("Want to play again (y/n) : ")
+        if b=="y":
+            print_home_screen()
+        elif b=="n":
+            print('''
+                Leaving the Game
+            Come and play again soon:)
+            ''')
+        else:
+            print("Wrong choice")
 
 def print_game_screen():
     os.system("clear")
