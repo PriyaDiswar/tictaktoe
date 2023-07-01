@@ -75,7 +75,7 @@ def validate_input(inp):
         make_move(inp)
 
 chance=1   
-def game_symbol(symb):
+def game_symbol():
     global chance
     if chance%2!=0:
         chance+=1
@@ -87,11 +87,11 @@ def game_symbol(symb):
 def make_move(inp):
     if inp != None:
         if (inp > 0) and (inp < 4):
-            BOARD[0][inp-1]=game_symbol(symb)
+            BOARD[0][inp-1]=game_symbol()
         elif (inp > 3)and (inp < 7):
-            BOARD[1][inp-4]=game_symbol(symb)
+            BOARD[1][inp-4]=game_symbol()
         elif (inp > 6)and (inp < 10):
-            BOARD[2][inp-7]=game_symbol(symb)
+            BOARD[2][inp-7]=game_symbol()
     else:
         take_input()
 
@@ -100,4 +100,5 @@ def play_game():
         print_game_screen()
         inp=take_input()
         validate_input(inp)
+print_home_screen()
 play_game()
