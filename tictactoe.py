@@ -35,7 +35,12 @@ def check_game_isdraw():
     pass
 
 def check_game_iswinner(sign):
-    pass
+    # todo: this function is not complete yet, some conditions are not included now
+    global board
+    for i in range(3):
+        if board[i][0]==board[i][1]==board[i][2]:
+            return True
+        
 
 def take_input():
     a=int(input("Please enter your choice : "))
