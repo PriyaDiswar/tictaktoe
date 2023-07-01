@@ -63,8 +63,12 @@ def game_symbol(symb):
 
 def make_move(symb,inp):
     if inp != None:
-        
-        arr[inp-1]=game_symbol(symb)
+        if (inp > 0) and (inp < 4):
+            BOARD[0][inp-1]=game_symbol(symb)
+        elif (inp > 3)and (inp < 7):
+            BOARD[1][inp-1]=game_symbol(symb)
+        elif (inp > 6)and (inp < 10):
+            BOARD[2][inp-1]=game_symbol(symb)
     else:
         take_input()
 
