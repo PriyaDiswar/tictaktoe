@@ -1,7 +1,7 @@
 import os
 symb=None
 # TODO: Keep board empty at start
-BOARD = [['0', '0', 'X'], ['0', 'X', 'O'], ['X', 'O', '0']]
+BOARD = [['', '', ''], ['', '', ''], ['', '', '']]
 
 def print_home_screen():
     os.system("clear")
@@ -65,29 +65,31 @@ def take_input():
     if a>9:
         return None
     return a
-  
+double_validate=[] 
 def validate_input(inp):
-    double_validate=[]
+    global double_validate
     if inp not in double_validate:
-        make_move(symb,inp)
-    
-    else:
-            take_input()
-    
-def game_symbol(symb):
-    if symb=="X":
-        return "0"
-    else:
-        return "X" 
+        double_validate.append(inp)
+        make_move(inp)
 
-def make_move(symb,inp):
+chance=1   
+def game_symbol(symb):
+    global chance
+    if chance%2!=0:
+        chance+=1
+        return "X"
+    else: 
+        chance+=1
+        return "0"
+        
+def make_move(inp):
     if inp != None:
         if (inp > 0) and (inp < 4):
             BOARD[0][inp-1]=game_symbol(symb)
         elif (inp > 3)and (inp < 7):
-            BOARD[1][inp-1]=game_symbol(symb)
+            BOARD[1][inp-4]=game_symbol(symb)
         elif (inp > 6)and (inp < 10):
-            BOARD[2][inp-1]=game_symbol(symb)
+            BOARD[2][inp-7]=game_symbol(symb)
     else:
         take_input()
 
