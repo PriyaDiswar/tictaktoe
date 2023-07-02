@@ -50,7 +50,30 @@ def print_game_screen():
     """)
     time.sleep(.1)
 def check_game_result():
-    pass
+    if BOARD[0][0]==BOARD[0][1]==BOARD[0][2]=="X" or BOARD[0][0]==BOARD[0][1]==BOARD[0][2]=="0":
+        print (f"Winner is {BOARD[0][0]}")
+        exit()
+    elif BOARD[1][0]==BOARD[1][1]==BOARD[1][2]=="X" or BOARD[1][0]==BOARD[1][1]==BOARD[1][2]=="0":
+        print (f"Winner is {BOARD[1][0]}")
+        exit()
+    elif BOARD[2][0]==BOARD[2][1]==BOARD[2][2]=="X" or BOARD[2][0]==BOARD[2][1]==BOARD[2][2]=="0":
+        print (f"Winner is {BOARD[2][0]}")
+        exit()
+    elif BOARD[0][0]==BOARD[1][0]==BOARD[2][0]=="X" or BOARD[0][0]==BOARD[1][0]==BOARD[2][0]=="0":
+        print (f"Winner is {BOARD[0][0]}")
+        exit()
+    elif BOARD[0][1]==BOARD[1][1]==BOARD[2][1]=="X" or BOARD[0][1]==BOARD[1][1]==BOARD[2][1]=="0": 
+        print (f"Winner is {BOARD[0][1]}")
+        exit()
+    elif BOARD[0][2]==BOARD[1][2]==BOARD[2][2]=="X" or BOARD[0][2]==BOARD[1][2]==BOARD[2][2]=="0": 
+        print (f"Winner is {BOARD[0][2]}")
+        exit()
+    elif BOARD[0][0]==BOARD[1][1]==BOARD[2][2]=="X" or BOARD[0][0]==BOARD[1][1]==BOARD[2][2]=="0":
+        print (f"Winner is {BOARD[0][0]}")
+        exit()
+    elif BOARD[0][2]==BOARD[1][1]==BOARD[2][0]=="X" or BOARD[0][2]==BOARD[1][1]==BOARD[2][0]=="0": 
+        print (f"Winner is {BOARD[0][2]}")
+        exit()
 
 def check_game_isdraw():
     pass
@@ -98,6 +121,7 @@ def make_move(inp):
 def play_game():
     while True:
         print_game_screen()
+        check_game_result()
         inp=take_input()
         validate_input(inp)
 print_home_screen()
