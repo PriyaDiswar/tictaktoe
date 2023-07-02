@@ -119,7 +119,7 @@ def game_symbol():
         return "X"
     else: 
         chance+=1
-        return "0"
+        return "O"
         
 def make_move(inp):
     if inp != None:
