@@ -1,6 +1,8 @@
-'''os: This module provides a way to interact with the operating system.
-   sys: The sys module provides access to some variables and functions that interact with the Python interpreter.
-   time: This module provides various time-related functions. It allows you to measure time, delay program execution.
+'''os: A way to interact with the operating system.
+   sys: Provides access to some variables and functions
+    that interact with the Python interpreter.
+   time: This module provides various time-related functions.
+     It allows you to measure time, delay program execution.
 '''
 import os
 import sys
@@ -114,7 +116,7 @@ def game_symbol():
     '''This function returns X or O.'''
     symbol = "X" if chance_in_array[0] % 2 != 0 else "O"
     chance_in_array[0]+= 1
-    return symbol,
+    return symbol
 def make_move(inp):
     '''This function insert the game symbol into 3*3 grid.'''
     if inp is not None:
@@ -133,5 +135,6 @@ def play_game():
         inp=take_input()
         validate_input(inp)
         check_game_result()
-print_home_screen()
+
+print_home_screen() 
 play_game()
