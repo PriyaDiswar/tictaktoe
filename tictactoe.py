@@ -1,4 +1,5 @@
 import os
+import sys
 import time
 # TODO: Keep board empty at start
 BOARD = [[' ', ' ', ' '], [' ', ' ', ' '], [' ', ' ', ' ']]
@@ -38,7 +39,6 @@ def print_game_screen():
       7  |  8  |  9 
          |     |     
     ''')
-    
     print(f"""
          |     |     
       {BOARD[0][0]}  |  {BOARD[0][1]}  |  {BOARD[0][2]}
@@ -50,21 +50,19 @@ def print_game_screen():
     """)
     time.sleep(.1)
 def check_game_result():
-    a=check_game_iswinner("X")
-    b=check_game_iswinner("O")
-    c=check_game_isdraw()
-    if a==True:
-      print("X is winner")
-      exit()
-    elif b==True:
-      print("O is winner")
-      exit()
-    elif c==True:
-      print("game draw")
-      exit()
+    winner_X=check_game_iswinner("X")
+    winner_0=check_game_iswinner("O")
+    checking_draw=check_game_isdraw()
+    if winner_X is True:
+        print("X is winner")
+        sys.exit()
+    elif winner_0 is True:
+        print("O is winner")
+        sys.exit()
+    elif checking_draw is True:
+        print("game draw")
+        sys.exit()
     
-    
-
 def check_game_isdraw():
     res=True
     for i in range(3):
@@ -72,15 +70,16 @@ def check_game_isdraw():
             a=BOARD[i][j].isalpha()
             res=res and a
 
-    p=check_game_iswinner("X")
-    q=check_game_iswinner("O")
-    if res==True and p==False and q==False:
+    winner_X=check_game_iswinner("X")
+    winner_0=check_game_iswinner("O")
+    if res is True and winner_X is False and winner_0 is False:
         return True
     else:
         return False
 
 
 def check_game_iswinner(sign):
+    '''Who will be the winner of game is decided here.'''
     win=False
     #for row
     for i in range(3):
@@ -88,7 +87,7 @@ def check_game_iswinner(sign):
             win=True
             break
     #for column
-        elif BOARD[0][i]==BOARD[1][i]==BOARD[2][i]==sign:
+        if BOARD[0][i]==BOARD[1][i]==BOARD[2][i]==sign:
             win=True
             break
     #for diagonal
@@ -100,31 +99,30 @@ def check_game_iswinner(sign):
     return win
   
 def take_input():
-    a=int(input("Please enter your choice : "))
-    if a>9:
+    '''Input taken from the user for the choice of position in 3*3 grid.'''
+    CHOICE=int(input("Please enter your choice : "))
+    if CHOICE>9:
         return None
-    return a
+    return CHOICE
+
 double_validate=[] 
 def validate_input(inp):
-    global double_validate
     if inp not in double_validate:
         double_validate.append(inp)
         make_move(inp)
 
-chance=1   
+CHANCE=1   
 def game_symbol():
-    global chance
-    if chance%2!=0:
-        chance+=1
-        return "X"
-    else: 
-        chance+=1
-        return "O"
+    global CHANCE
+    symbol = "X" if CHANCE % 2 != 0 else "O"
+    CHANCE += 1
+    return symbol
         
 def make_move(inp):
-    if inp != None:
+    '''This function insert the game symbol into 3*3 grid.'''
+    if inp is not None:
         if (inp > 0) and (inp < 4):
-            BOARD[0][inp-1]=game_symbol()
+            BOARD[0][inp-1]=game_symbol()   
         elif (inp > 3)and (inp < 7):
             BOARD[1][inp-4]=game_symbol()
         elif (inp > 6)and (inp < 10):
