@@ -135,6 +135,5 @@ def play_game():
         inp=take_input()
         validate_input(inp)
         check_game_result()
-
-print_home_screen() 
+print_home_screen()
 play_game()
