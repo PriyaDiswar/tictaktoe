@@ -1,3 +1,7 @@
+'''os: This module provides a way to interact with the operating system.
+   sys: The sys module provides access to some variables and functions that interact with the Python interpreter.
+   time: This module provides various time-related functions. It allows you to measure time, delay program execution.
+'''
 import os
 import sys
 import time
@@ -99,34 +103,35 @@ def take_input():
     if choice>9:
         return None
     return choice
-double_validate=[] 
+double_validate=[]
 def validate_input(inp):
+    '''This function validate input taken from the user.'''
     if inp not in double_validate:
         double_validate.append(inp)
         make_move(inp)
-CHANCE=1   
+chance_in_array=[1]
 def game_symbol():
-    global CHANCE
-    symbol = "X" if CHANCE % 2 != 0 else "O"
-    CHANCE += 1
-    return symbol
+    '''This function returns X or O.'''
+    symbol = "X" if chance_in_array[0] % 2 != 0 else "O"
+    chance_in_array[0]+= 1
+    return symbol,
 def make_move(inp):
     '''This function insert the game symbol into 3*3 grid.'''
     if inp is not None:
         if 0 < inp < 4:
-            BOARD[0][inp - 1] = game_symbol()
+            BOARD[0][inp - 1] = game_symbol()[0]
         elif 3 < inp < 7:
-            BOARD[1][inp - 4] = game_symbol()
+            BOARD[1][inp - 4] = game_symbol()[0]
         elif 6 < inp < 10:
-            BOARD[2][inp - 7] = game_symbol()
+            BOARD[2][inp - 7] = game_symbol()[0]
     else:
         take_input()
 def play_game():
-    '''This function is calling above neccessary functions and helps in playing the game using loops.'''
+    '''This function is calling above neccessary functions.'''
     while True:
         print_game_screen()
-        check_game_result()
         inp=take_input()
         validate_input(inp)
+        check_game_result()
 print_home_screen()
 play_game()
