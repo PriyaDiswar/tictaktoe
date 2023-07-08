@@ -15,12 +15,18 @@ Here's a step-by-step guide on how to play Tic-Tac-Toe:
 6. If a player gets three of their symbols in a row, they win the game. If all the cells are filled and no player has won, the game is a tie.
 To make a move, you need to specify the position on the grid where you want to place your symbol. This is usually done by using numbers 1 to 9 to represent the different cells on the grid, as shown in the given screenshots.
 
-## Images
-❮img src="screenshots/game_starting.png"❯
-❮img src="screenshots/choosing_1_to_start.png"❯
-❮img src="screenshots/winner_x.png"❯
-❮img src="screenshots/winner_0.png" ❯
-❮img src="screenshots/game_draw.png" ❯
+## Images/Samples
+
+### Image 1
+![Image 1](https://github.com/hacquees/tictactoe/blob/main/screenshots/choosing_1_to_start.png)
+### Image 2
+![Image 2](https://github.com/hacquees/tictactoe/blob/main/screenshots/game_draw.png)
+### Image 3
+![Image 3](https://github.com/hacquees/tictactoe/blob/main/screenshots/game_starting.png)
+### Image 4
+![Image 4](https://github.com/hacquees/tictactoe/blob/main/screenshots/winner_0.png)
+### Image 5
+![Image 5](https://github.com/hacquees/tictactoe/blob/main/screenshots/winner_x.png)
 
 ## How to execute? 
 Coming soon
