@@ -18,11 +18,11 @@ To make a move, you need to specify the position on the grid where you want to p
 ## Images/Samples
 
 ### Image 1
-![Image 1](https://github.com/hacquees/tictactoe/blob/main/screenshots/choosing_1_to_start.png)
+![Image 1](https://github.com/hacquees/tictactoe/blob/main/screenshots/game_starting.png)
 ### Image 2
-![Image 2](https://github.com/hacquees/tictactoe/blob/main/screenshots/game_draw.png)
+![Image 2](https://github.com/hacquees/tictactoe/blob/main/screenshots/choosing_1_to_start.png)
 ### Image 3
-![Image 3](https://github.com/hacquees/tictactoe/blob/main/screenshots/game_starting.png)
+![Image 3](https://github.com/hacquees/tictactoe/blob/main/screenshots/game_draw.png)
 ### Image 4
 ![Image 4](https://github.com/hacquees/tictactoe/blob/main/screenshots/winner_0.png)
 ### Image 5
