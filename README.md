@@ -3,6 +3,7 @@
 Tic-tac-toe is played on a three-by-three grid by two players, who alternately place the marks X and O in one of the nine spaces in the grid.
 The objective of the game is to get three of your symbols in a row, either horizontally, vertically, or diagonally, before your opponent does.
 
+## HOW TO PLAY THIS GAME?
 Here's a step-by-step guide on how to play Tic-Tac-Toe:
 
 1. The game begins with an empty 3x3 grid.
@@ -29,10 +30,10 @@ To make a move, you need to specify the position on the grid where you want to p
 ![Image 5](https://github.com/hacquees/tictactoe/blob/main/screenshots/winner_x.png)
 
 ## How to execute? 
-Coming soon
-
-## HOW TO PLAY THIS GAME?
-COMING SOON..........
+1. Execute tictactoe.py file in any IDE.
+2. Press 1 to start the game.
+3. Now first player will choose the grid position to play a move with sign "X".
+4. Now second player will play his move and the game will move on as per the above rules.
 
 ## List of contributors
 
