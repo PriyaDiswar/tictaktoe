@@ -1,4 +1,4 @@
-# tictaktoe
+# tictactoe
 
 Tic-tac-toe is played on a three-by-three grid by two players, who alternately place the marks X and O in one of the nine spaces in the grid.
 The objective of the game is to get three of your symbols in a row, either horizontally, vertically, or diagonally, before your opponent does.
